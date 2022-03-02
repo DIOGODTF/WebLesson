@@ -1,2 +1,3 @@
 # WebLesson
 My web design lessons.
+Collection of the most varied web development themes that I've been collecting over time...
