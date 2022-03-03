@@ -14,18 +14,18 @@
        </div>
        <div class="rightside">
            <h1>Crie uma conta</h1>
-           <form method="POST" class="b7validador">
+           <form method="POST" action="teste.php" class="objValidator">
                 <label>
                      Seu nome:<br/>
-                     <input type="text" name="name" data-rules="required"/>
+                     <input type="text" name="name" data-rules="required|min=5"/>
                 </label>
                 <label>
                     Seu e-mail:<br/>
-                    <input type="text" name="email"/>
+                    <input type="text" name="email" data-rules="required|email"/>
                 </label>
                 <label>
                     Sua senha:<br/>
-                    <input type="password" name="password"/>
+                    <input type="password" name="password" data-rules="required|min=4"/>
                 </label>
                 <label>
                     <input type="submit" value="Cadastrar"/>
