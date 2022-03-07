@@ -1,0 +1,80 @@
+.movierow {
+    margin-bottom: 30px;
+}
+
+.movierow h2 {
+    /*zera todas as margins do h2 deixa so da esquerda*/
+    margin: 0px 0px 0px 30px;
+}
+
+.movierow--listarea {
+    /*tudo passar da tela na horizontal sera cortado*/
+    overflow-x: hidden; 
+    padding-left: 30px; /*desencosta da esquerda*/
+}
+
+
+.movierow--list {
+    transition: all ease 0.5s;    
+}
+
+.movierow--item {
+    /*coloca um item ao lado do outro*/
+   display: inline-block;
+   /*coloca um tamanha fixo*/
+   width: 150px; 
+   cursor: pointer;
+}
+
+.movierow--item img {
+    width: 100%; /*ao inves de colocar 150px aqui, coloca 100% pq neste caso a imagem já assume os 150px*/
+    transform: scale(0.9); /*forca a dimmuicao de 10%*/
+    transition: all ease 0.2s; /*faz o efeito de duracao da transicao*/
+}
+
+.movierow--item img:hover {
+    transform: scale(1); /*efeito de passar o mouse*/
+}
+
+.movierow--right,
+.movierow--left {
+    /*fica flutuando*/
+    position: absolute;    
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0; /* esconde o botoes */
+    transition: all ease 0.5s;
+}
+
+.movierow--left {
+    left: 0;  
+}
+
+.movierow--right {
+    right: 0;
+}
+
+.movierow:hover .movierow--left,
+.movierow:hover .movierow--right {
+    opacity: 1; /*aaparecem os botoes*/
+}
+
+/*celular smpre com opacidade 1*/ 
+@media (max-width:760px) {
+    .movierow--right,
+    .movierow--left {
+        opacity: 1;
+    }
+    
+    .movierow h2 {
+        /*zera todas as margins do h2 deixa so da esquerda*/
+        margin: 40px 0px 0px 30px;
+    }
+}
