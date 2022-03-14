@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{ box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; 
+}
+
+header {
+    padding-top: 45px;    
+}
+
+.main {
+    background-color: #1D2437;    
+    background-image: url('../images/BG.png');
+}
+
+.container {
+    max-width: 1070px;
+    margin: auto;
+    color: #fff;
+}
+
+.heroarea {
+    display: flex;
+}
+
+.heroarea .leftside{
+    flex: 1;
+}
+.heroarea .leftside h1 {
+    font-weight: bold;  
+    font-size: 42px;
+    line-height: 50px;
+    margin: 80px 0 30px 0;
+}
+.heroarea .leftside .subtitle {
+    font-size: 16px;
+    line-height: 23px;
+    color: #999;
+    margin:0 0 30px 0
+}
+.heroarea .leftside .form {
+    margin:0 0 30px 0;      
+}
+
+.heroarea .leftside .form input {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    height: 40px;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    width: 300px;       
+    padding: 0 10px; 
+}
+.heroarea .leftside .form button {
+    height: 40px;
+    border: 0;
+    background-color: #0071B7;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 20px;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+}
+.heroarea .leftside .form button:hover {
+    opacity: .7;
+}
+.heroarea .leftside .techs {
+    margin:0 0 80px 0;
+}
+.heroarea .leftside .techs img {
+    margin-right: 10px;
+
+}
+
+.heroarea .rightside{    
+    flex: 1;
+    background-image: url('../images/hero.png');
+    background-size: 100% auto;
+}
+
+/**** SECTION INFO  ****/
+
+.info {
+    height: 100px;
+    border-bottom: 2px solid #EAEEF1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info--text {
+   font-size: 20px; 
+   font-weight: bold;
+   color: #C2C8CB;
+   margin: 0 20px;
+}
+
+.info--circle {
+   width: 8px;
+   height: 8px;
+   background-color:#C2C8CB ; 
+   border-radius: 50px;
+   margin: 0 10px;
+}
+
+/*** SECTION INSTRUCTIONS ***/
+.inst--container{
+    margin: auto;
+    max-width: 900px;
+    padding: 90px 0;
+}
+
+.instructions {
+
+}
+
+/*** FOOTER ***/
+
+footer{
+    background-color: #999;
+    height: 200px;
+}
