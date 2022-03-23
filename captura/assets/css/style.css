@@ -80,6 +80,8 @@ header {
 .heroarea .rightside{    
     flex: 1;
     background-image: url('../images/hero.png');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
     background-size: 100% auto;
 }
 
@@ -109,19 +111,151 @@ header {
 }
 
 /*** SECTION INSTRUCTIONS ***/
+.instructions {
+
+}
 .inst--container{
     margin: auto;
     max-width: 900px;
     padding: 90px 0;
 }
+.inst--item {
+    border-left: 3px solid #ECF0F3; 
+    display: flex; /*um ao lado do outro*/    
+}
+/*ultimo item sempre tirar a borda*/
+.inst--item:last-child{
+    border:0
+}
+.inst--circle{
+    border-radius: 50px;
+    width: 17px;
+    height: 17px;
+    background-color: #0071B7;    
+    margin-left: -9px;
+} 
+.inst--text{
+    flex: 1;
+    margin-left: 50px;    
+}
+.inst--text h2{
+    font-size: 32px;
+    color: #000;
+    margin: -10px 0 20px 0;    
+}
+.inst--text p{
+    font-size: 16px;
+    line-height: 23px;
+    color: #777;
+    margin-bottom: 70px;
+}
+.inst--text p:last-child p{
+    margin: 0;
+}
 
-.instructions {
-
+/*** SECTION CTA ***/
+.cta {
+    background-color: #1D2437;
+    border-bottom: 2px solid #333;
+}
+.cta-container{
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    padding: 100px 0;
+    color: #fff;
+}
+.cta--left{
+    flex: 1;
+    margin-left: 30px;
+}
+.cta--left h2{
+    font-size: 40px;
+    margin: 0;
+}
+.cta--left p{
+    font-size: 18px;
+    line-height: 25px;
+    color: #777;
+}
+.cta--right{
+    flex: 1;
+    margin-right: 30px;
+}
+.cta--right input {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    height: 40px;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    width: 100%;       
+    padding: 0 10px; 
+    margin: 0 0 20px 0;
+}
+.cta--right button {
+    height: 40px;
+    border: 0;
+    background-color: #0071B7;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 20px;
+    width: 100%;
+    cursor: pointer;
+}
+.cta--right button:hover {
+    opacity: .7;
 }
 
 /*** FOOTER ***/
 
 footer{
-    background-color: #999;
-    height: 200px;
+    background-color: #1D2437;       
+    color: #fff; 
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 40px 0;
+    max-width: 1070px;
+}
+.footer-left{
+
+}
+.footer-right{
+    font-size: 16px;
+    color: #777;
+    text-align: right;
+    line-height: 25px; /*espaco de uma linha e outra*/
+}
+.footer-right a{
+    color: #777;
+    text-decoration: none;
+}
+.footer-right a:hover{   
+    text-decoration: underline;
+}
+
+/*** RESPONSIVIDADE ***/
+@media (max-width: 1030px) {
+    .main .container {
+        padding: 0 20px;
+    }
+    footer .footer-container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width:900px) {
+    .heroarea{
+        flex-direction: column-reverse;
+    }
+    .heroarea .rightside {
+        flex: none;
+        height: 400px;
+        background-size: auto 100%;
+        background-position-x: center;
+    }
 }
